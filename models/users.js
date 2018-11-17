@@ -14,21 +14,6 @@ var Users = mongoose.model('Users', usersSchema );
 
 module.exports = Users;
 
-/*exports.index =async function(req,res){
-    console.log("user");
-    user=req.params.username;
-    // find all athletes that play tennis
-    Users.find({ 'username': user}, function(err, user) {
-        if (err) throw err;
-      
-        // show the one user
-        console.log(user);
-        res.render('users',{
-            username: user
-        })
-      });
-   
-}
-*/
+
 
 

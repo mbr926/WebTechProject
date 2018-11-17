@@ -1,8 +1,8 @@
 exports.login= async function(req,res){
-
+res.render('login');
 }
 
-exports.auth=  async function(req,res){
+exports.authenticate=  async function(req,res){
     if(!req.body.id || !req.body.password){
        res.render('login', {message: "Please enter both id and password"});
     } else {

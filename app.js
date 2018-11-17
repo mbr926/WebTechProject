@@ -9,7 +9,7 @@ var multer= require('multer');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-//var blogsRouter = require('./routes/blogs');
+var blogsRouter = require('./routes/blogs');
 var app = express();// app
 //Import the mongoose module
 
@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', authRouter);
-//app.use('/blogs', blogsRouter);
+app.use('/blogs', blogsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
